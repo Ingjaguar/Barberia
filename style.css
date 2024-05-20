@@ -1,0 +1,223 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*background: linear-gradient(90deg, white ,gray 80%,black);*/
+}
+header{
+    background-color: darkgray;
+    padding: 5px 0;
+}
+.logoHeader{
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+}
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+nav{
+    position: absolute;
+    top: 110px;
+    right: 10px;
+}
+nav li{
+    display: inline;
+    margin: 0 0 0 20px;
+}
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+/* Pseudo Clase Hover captura el evento del mouse */
+nav a:hover{
+    color:orange;
+    text-shadow: 1px 1px 15px black;
+}
+.productos{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 25px;
+}
+.productos li{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    outline: 2px solid darkgrey;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.productos li:hover{
+    border-color:orange;
+}
+.productos li:active{
+    border-color:chartreuse;
+}
+/* Efecto para aumentar tamaño */
+.productos li:hover h2{
+    font-size: 28px;
+}
+.productos h2{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    background: gray;
+    border-radius: 12px;
+}
+.descripcion{
+    font-size: 18px;
+}
+.precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+
+}
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 20px;
+}
+.copyright{
+    color: white;
+    font-size: small;
+    margin-left: 10px;
+}
+/* PAGINA CONTACTO */
+main{
+    width: 940px;
+    margin: 0 auto;
+}
+form{
+    margin: 20px auto;
+}
+form label, select{
+    display: block;
+    font-size: 16px;
+    margin: 10px;
+}
+.input-padron{
+    display: block;
+    width: 80%;
+    font-size: 16px;
+    margin: 10px;
+
+}
+.enviar{
+    width: 30%;
+    padding: 15px 0;
+    font-weight: bold;
+    color: white;
+    background: grey;
+    border-radius: 5px;
+    transition: 100ms all;
+    cursor: pointer;/*Cambia el cursor*/
+}
+.enviar:hover{
+    background: darkgrey;
+    transform: scale(1.05);
+}
+table{
+    margin: 40px;
+}
+thead, tfoot{
+    color: white;
+    background: gray;
+    font-weight: bold;
+}
+td, th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+/* CSS Index */
+/* -------------------------------------------------------- */
+.banner{
+    width: 100%;
+}
+.titulo-principal{
+    text-align: center;
+    font-size: 42px;
+    margin: 25px;
+    clear: left;
+}
+.titulo-principal:first-letter {
+    font-weight: bold;
+    font-size: 60px;
+}
+.items:before{
+    content: "\2663";/*Trebol*/
+}
+.imgUtensilios{
+    float: left;
+    width: 35%;
+    margin: 0 20px 10px 0;
+}
+.diferenciales{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    
+}
+.principal p, .diferenciales li{
+    margin: 15px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 25px;
+}
+.principal strong{
+    font-weight: bold;
+    font-style: italic;
+}
+.lista{
+    display:inline-block;
+}
+.items:nth-child(2n){ /*PseudoClase para resaltar texto*/
+    font-weight: bold;
+}
+.imagenDiferenciales{
+    width: 30%;
+    flex: 50px;
+    transition: 200ms;
+}
+.imagenDiferenciales:hover{
+    opacity: 30%;
+    box-shadow: 0px 0px 40px 5px red;
+}
+.mapa{
+    margin-bottom: 40px ;
+}
+.video{
+   margin-bottom: 40px;
+}
+.logoFooter{
+    filter: drop-shadow(0 0 10px rgba(255,255,255,.9));
+}
+@media screen and (max-width: 940px){
+    main, .caja {
+        width: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .diferenciales, .imagenDiferenciales{
+        display: block;
+        width: 100%;
+    }
+    nav a, .listaNavegacion, .titulo-principal {
+        font-size: unset;
+        text-align: center;
+    }
+    .principal p, .diferenciales li {
+        text-align: justify;
+        font-size: unset;
+    }
+    .titulo-principal:first-letter {
+        font-size: unset;
+    }
+}
